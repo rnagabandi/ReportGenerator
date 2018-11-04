@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1">
+
+	<listeners>
+		<!-- <listener class-name="com.automation.report.ReportGenerator.AutomationEmailableReport" 
+			/> -->
+		<listener class-name="com.automation.report.ReportGenerator.AutomationReport" />
+	</listeners>
+
+	<test name="Regression1">
+
+		<groups>
+			<run>
+				<include name="test" />
+			</run>
+		</groups>
+
+		<packages>
+			<package name="com.automation.report.ReportGenerator" />
+		</packages>
+	</test>
+</suite>
